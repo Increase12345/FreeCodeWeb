@@ -5,3 +5,6 @@ def index(request):
 
 def cart(request):
     return render(request, 'base/cart.html')
+
+def guitar(request):
+    return render(request, 'base/guitar.html')
