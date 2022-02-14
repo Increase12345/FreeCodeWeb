@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Coding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="https://i.ibb.co/ZKYrFRT/logo2.png" type="image/icon type"/>
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-image: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+            background-size: cover;
+            background-repeat: no-repeat;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            text-align: center;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        h1, h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        p {
+            color: #c2ff35;
+        }
+
+        /*=== Header ===*/
+
+        #navbar {
+            width: 100%;
+            background-color: #272727bb;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-bottom: 1px solid #000;
+            z-index: 5;
+        }
+        
+        .nav-content {
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+
+        .nav-content .logo{
+            display: flex;
+            width: 75%;
+        }
+  
+
+        .nav-content .logo img{
+            width: 70%;
+        }
+
+        .nav-content ul{
+            font-size: 14px;
+            font-weight: bold;
+            padding: 0;
+            list-style: none;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-content ul li{
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .nav-content ul li:last-child{
+            margin-right: 0;
+        }
+
+        .nav-content ul li a{
+            text-decoration: none;
+            color: #ffffff;
+            transition: all .4s ease-in-out;
+        }
+
+        .nav-content ul li a:hover {
+            color: #000;
+        }
+        
+
+        /*============= Welcoming ===============*/
+        #welcome-section{
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            transition: all .5s ease-in-out;
+        }
+
+        
+
+        /*============= projects ===============*/
+        #projects {
+        background-image: linear-gradient(to right, #c7c7c7, #ffffff, #c7c7c7);
+        padding: 20px 0;
+        min-height: 100vh;
+        align-items: center;
+        display: flex;
+        border-radius: 5px;
+        }
+
+        #projects .project-tile {
+        padding-bottom: 30px;
+        padding-top: 73px;
+        }
+
+        #projects .cards {
+        display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+
+        #projects .cards .card{
+        display: block;
+        width: 100%;
+        position: relative;
+        transition: all 1s ease-in-out;
+        }
+
+        
+
+        #projects .cards .card img{
+        width: 100%;
+        max-height: 300px;
+        height: 100%;
+        border-radius: 5px;
+        }
+
+        #projects .cards .card figcaption{
+            position: absolute;
+            z-index: 2;
+            color: #fff;
+            font-size: 20px;
+            bottom: 0;
+            margin: 0 auto;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            background-color: rgb(0,0,0,.8);
+            border-radius: 5px;
+        }
+
+        /*============= Contact ===============*/
+        #contact {
+        color: #fff;
+        display: flex;
+        min-height: 80vh;
+        align-items: center;
+        text-align: center;
+        transition: all .5s ease-in-out;
+        }
+
+
+        #contact h2{
+        margin-bottom: 0
+        }
+
+
+        #contact ul{
+            padding: 0;
+            font-size: 30px;
+            list-style: none;
+            width: 100%;
+        }
+
+        #contact ul li{
+        display: inline-block;
+        margin: 40px;
+        margin-bottom: 15px;
+        transition: all .5s ease-in-out;
+        }
+
+        #contact ul li:last-child{
+        margin-right: 0;
+        }
+
+        
+
+        #contact ul li a{
+        text-decoration: none;
+        color: #ffffff;
+        }
+
+        /*============= Footer ===============*/
+        footer {
+        width: 100%;
+        background-image: linear-gradient(to right, #383838, #535353, #363636);
+        border-top: 1px solid #aa4b6b;
+        font-size: 12px;
+        }
+
+        footer .footer-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 5vh;
+        }
+
+        footer .footer-content .logo{
+        min-width: 80px;
+        margin-right: 20px;
+        }
+
+        footer .footer-content .logo img{
+        width: 45%;
+        }
+
+        /*============= Media query ===============*/
+        @media(min-width: 400px){
+        .nav-content .logo{
+            width: 20%;
+        }
+        }
+        @media (min-width: 600px){
+        .nav-content ul {
+            font-size: 18px;
+        }
+        .nav-content ul li a{
+            padding: 20px;
+        }
+        .nav-content ul li a:hover {
+            background-color: #000;
+            color: #bd5175;
+            border-radius: 50%;
+        }
+        #projects .cards {
+            grid-template-columns: 1fr 1fr;
+        }
+        }
+
+        @media (min-width: 900px){
+        #projects .cards {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        #welcome-section:hover{
+            transform: scale(1.5);
+        }
+        #projects .card:hover{
+        transform: rotate3d(0, 1, .5, 1turn);
+            position: relative;
+            z-index: 10;
+        }
+        #contact ul li:hover{
+        transform: scale(1.5) rotate(-15deg);
+        }
+        }
+        
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 30px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+
+    </style>
+</head>
+    
+<body>
+    
+
+<nav id="navbar">
+    <div class="container">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="https://i.ibb.co/tLjvsQr/logo-sm.png" alt="nick-logo">
+            </div>
+            <ul>
+                <li><a href="#welcome-section">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="welcome-section">
+    <div class="container">
+        <h1>Hey I am Nick</h1>
+        <p><em>a web developer</em></p>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2>These are some of my work</h2>
+        <div class="cards">
+            <a class="card" href="https://codepen.io/IncreaseNick/full/LYOWjOY" target="_blank">
+                <img 
+                     alt="Survey form project"
+                     src="https://i.ibb.co/M85S4WM/cart.jpg" />
+                <figcaption>Cart Form</figcaption>
+              </a>
+              <a class="card" href="https://codepen.io/IncreaseNick/full/eYegdqY" target="_blank">
+                <img 
+                     alt="Tribute page project"
+                     src="https://i.ibb.co/2drgjP7/tri.jpg"  />
+                <figcaption>Tribute page</figcaption>
+              </a>
+        
+              <a class="card" href="https://codepen.io/IncreaseNick/full/BamdzNx" target="_blank">
+                <img 
+                     alt="Techincal documentation project"
+                     src="https://i.ibb.co/MVJhysS/survey-form.jpg" />
+                <figcaption>Techincal Documentation</figcaption>
+              </a>
+        
+              <a class="card" href="https://codepen.io/IncreaseNick/full/ZEaKBEw" target="_blank">
+                <img 
+                     alt="Product landing project"
+                     src="https://i.ibb.co/sJsvKC1/pr.jpg" />
+                <figcaption>Product landing</figcaption>
+              </a>
+        
+              <a class="card" href="http://increase.pythonanywhere.com/" target="_blank">
+                <img src="https://i.ibb.co/n885H8x/we.jpg" alt="DwinaTech portfolio" />
+                <figcaption>Weather App</figcaption>
+              </a>
+              
+              <a class="card" href="#" target="_blank">
+                <img src="https://i.ibb.co/KhChvTT/calc.jpg" alt="DwinaTech portfolio" />
+                <figcaption>Simple Calculator</figcaption>
+              </a>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<section id="contact">
+    <div class="container">
+      <h2 class="project-tile">Let us get in touch</h2>
+      <p><em>You can reach me through flowing links</em><p>
+      <ul>
+        <li><a id="profile-link" target="_blank" href="https://github.com/Increase12345"><i class="fa fa-github"></i> <br> Github</a></li>
+        <li><a target="_blank" href="https://www.facebook.com/profile.php?id=100005996760405"><i class="fa fa-facebook"></i> <br> Facebook</a></li>
+        <li><a target="_blank" href="https://www.instagram.com/k0li4ka/"><i class="fa fa-instagram"></i> <br> k0li4ka</a></li>
+        <li><a id="profile-link" target="_blank" href="https://github.com/Increase12345"><i class="fa fa-at"></i> <br> Send a mail</a></li>
+        <br>
+      </ul>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>Copyright &copy; 2022 Nick Pavlov. All rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+
+ 
+</body>
+</html>
